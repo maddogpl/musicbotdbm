@@ -6,7 +6,7 @@ module.exports = {
     // This is the name of the action displayed in the editor.
     //---------------------------------------------------------------------
 
-    name: "Sprawdz zmienna MOD",
+    name: "Check Variable MOD",
 
     //---------------------------------------------------------------------
     // Action Section
@@ -14,7 +14,7 @@ module.exports = {
     // This is the section the action will fall into.
     //---------------------------------------------------------------------
 
-    section: "Warunki",
+    section: "Conditions",
 
     //---------------------------------------------------------------------
     // Action Subtitle
@@ -83,27 +83,27 @@ module.exports = {
         </p>
     <div>
         <div style="float: left; width: 35%;">
-            Zmienna:<br>
+            Variable:<br>
             <select id="storage" class="round" onchange="glob.refreshVariableList(this)">
                 ${data.variables[1]}
             </select>
         </div>
         <div id="varNameContainer" style="float: right; width: 60%;">
-            Nazwa zmiennej:<br>
+            Variable Name:<br>
             <input id="varName" class="round" type="text" list="variableList">
         </div>
     </div><br><br><br>
     <div style="padding-top: 8px;">
         <div style="float: left; width: 45%;">
-            Typ porównania:<br>
+            Comparison Type:<br>
             <select id="comparison" class="round" onchange="glob.onChange1(this)">
-                <option value="0" selected>Długość jest większa od</option>
-                <option value="1">Długość jest mniejsza od</option>
-                <option value="2">Długość jest</option>
+                <option value="0" selected>Length is Bigger Than</option>
+                <option value="1">Length is Smaller Than</option>
+                <option value="2">Length Equals</option>
             </select>
         </div>
         <div style="float: right; width: 50%;" id="directValue">
-            Wartość do porównania:<br>
+            Value to Compare to:<br>
             <input id="value" class="round" type="text" name="is-eval">
         </div>
     </div><br><br><br>

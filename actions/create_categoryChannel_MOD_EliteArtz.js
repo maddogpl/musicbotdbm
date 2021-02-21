@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Stworz Kategorie",
+name: "Create Category Channel",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Stworz Kategorie",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Kanały",
+section: "Channel Control",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -94,25 +94,25 @@ html: function(isEvent, data) {
 			Created by EliteArtz!
 		</p><br>
 		<p>
-			<u>Uwaga:</u><br>
-			- Wymagany Discord Bot Maker <b>BETA</b>
+			<u>Notices:</u><br>
+			- Requires Discord Bot Maker <b>BETA</b>
 		</p>
 	</div><br>
-Nazwa:<br>
+Name:<br>
 <input id="channelName" class="round" type="text"><br>
 <div style="float: left; width: 50%;">
-	Pozycja:<br>
-	<input id="position" class="round" type="text" placeholder="Zostaw puste by ustawić domyślnie!" style="width: 90%;"><br>
+	Position:<br>
+	<input id="position" class="round" type="text" placeholder="Leave blank for default!" style="width: 90%;"><br>
 </div>
 <div>
 	<div style="float: left; width: 35%;">
-		Zapisz w:<br>
+		Store In:<br>
 		<select id="storage" class="round" onchange="glob.variableChange(this, 'varNameContainer')">
 			${data.variables[0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text"><br>
 	</div>
 </div>`

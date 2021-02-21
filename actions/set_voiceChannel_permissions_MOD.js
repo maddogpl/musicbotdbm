@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Ustaw permisje kanalu glosowego",
+name: "Set Voice Channel Perms",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Ustaw permisje kanalu glosowego",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Kanały",
+section: "Channel Control",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -85,28 +85,28 @@ html: function(isEvent, data) {
 	</div><br>
 <div>
 	<div style="float: left; width: 45%;">
-		Kanał głosowy:<br>
+		Source Voice Channel:<br>
 		<select id="storage" class="round" onchange="glob.channelChange(this, 'varNameContainer')">
 			${data.voiceChannels[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="padding-left: 5%; float: left; width: 55%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 45%;">
-		Permisja:<br>
+		Permission:<br>
 		<select id="permission" class="round">
 			${data.permissions[newFunction_1()]}
 		</select>
 	</div>
 	<div style="padding-left: 5%; float: left; width: 55%;">
-		Zmień na:<br>
+		Change To:<br>
 		<select id="state" class="round">
-			<option value="0" selected>Zezwól</option>
-			<option value="1">Zakazuj</option>
+			<option value="0" selected>Allow</option>
+			<option value="1">Disallow</option>
 		</select>
 	</div>
 </div>`

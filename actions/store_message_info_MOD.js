@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Pobierz rzeczy wiadomosci",
+name: "Store Message Things",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Pobierz rzeczy wiadomosci",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Wiadomosci",
+section: "Messaging",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -122,39 +122,39 @@ html: function(isEvent, data) {
 	</div><br>
 <div>
 	<div style="float: left; width: 35%;">
-		Wiadomosc:<br>
+		Source Message:<br>
 		<select id="message" class="round" onchange="glob.messageChange(this, 'varNameContainer')">
 			${data.messages[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br>
 <div>
 	<div style="padding-top: 8px; width: 70%;">
-		Info:<br>
+		Source Info:<br>
 		<select id="info" class="round">
-			<option value="0" selected>Wiadomosc edytowana w</option>
-			<option value="1">Historia edycji wiadomosci</option>
-			<option value="2">Czy wiadomosc jest przypinalna?</option>
-			<option value="3">Czy wiadomosc posiada @everyone?</option>
-			<option value="4">Liczba roznych reakcji</option>
-			<option value="5">Lista oznaczonych uzytkownikow</option>
-			<option value="6">Liczba oznaczonych uzytkownikow</option>
+			<option value="0" selected>Message edited at</option>
+			<option value="1">Message edit history</option>
+			<option value="2">Message is pinnable?</option>
+			<option value="3">Message includes @everyone mention?</option>
+			<option value="4">Messages different reactions count</option>
+			<option value="5">Messages mentioned users list</option>
+			<option value="6">Messages mentioned users count</option>
 		</select>
 	</div>
 </div><br>
 <div>
 	<div style="float: left; width: 35%;">
-		Zapisz w:<br>
+		Store In:<br>
 		<select id="storage" class="round">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer2" style="float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName2" class="round" type="text"><br>
 	</div>
 </div>`

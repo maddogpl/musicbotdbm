@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Edytuj wiadomosc Embed",
+name: "Edit Embed",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Edytuj wiadomosc Embed",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Wiadomosci Embed",
+section: "Embed Message",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -83,29 +83,29 @@ html: function(isEvent, data) {
 	</div><br>
 <div>
 	<div style="float: left; width: 35%;">
-		Objekt wiadomosci Embed:<br>
+		Source Message Object:<br>
 		<select id="storage" class="round" onchange="glob.refreshVariableList(this, 'varNameContainer')">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br><br>
 	<div style="float: left; width: 35%;">
-		Nowy objekt wiadomosci Embed:<br>
+		Source New Embed Object:<br>
 		<select id="storage2" class="round" onchange="glob.refreshVariableList(this, 'varNameContainer2')">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer2" style="float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName2" class="round" type="text" list="variableList"><br>
 </div>
 <div style="float: left; width: 88%; padding-top: 8px;">
 	<p>
-		<b>UWAGA:</b> W "Objekt wiadomosci Embed" mozesz wpisac normalna wiadomosc albo wiadomosc Embed (jako zapisana zmienna w "Send Embed Message").
+		<b>NOTE:</b> In the "Source Message Object" you can insert a normal message or an embed message (use "Send Embed Message MOD").
 	</p>
 <div>
 </div>`

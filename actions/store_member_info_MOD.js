@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Pobierz info uzytkownika MOD",
+name: "Store Member Things",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Pobierz info uzytkownika MOD",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Użytkownicy",
+section: "Member Control",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -125,24 +125,24 @@ html: function(isEvent, data) {
 	</div><br>
 <div>
 	<div style="float: left; width: 35%;">
-		Użytkownik:<br>
+		Source Member:<br>
 		<select id="member" class="round" onchange="glob.memberChange(this, 'varNameContainer')">
 			${data.members[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br>
 <div>
 	<div style="padding-top: 8px; width: 70%;">
-		Info:<br>
+		Source Info:<br>
 		<select id="info" class="round">
-			<option value="0" selected>Data dołączenia</option>
-			<option value="1">Kanał głosowy</option>
-			<option value="2">Ostatnia wiadomość</option>
-			<option value="6">Data stworzenia konta</option>
+			<option value="0" selected>Join Date</option>
+			<option value="1">Voice Channel</option>
+			<option value="2">Last Message</option>
+			<option value="6">Account Creation Date</option>
 			<option value="5">Discriminator (#0001)</option>
 			<option value="7">Tag (Lasse#0001)</option>
 		</select>
@@ -150,13 +150,13 @@ html: function(isEvent, data) {
 </div><br>
 <div>
 	<div style="float: left; width: 35%;">
-		Zapisz w:<br>
+		Store In:<br>
 		<select id="storage" class="round">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer2" style="float: right; width: 60%;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName2" class="round" type="text"><br>
 	</div>
 </div>`

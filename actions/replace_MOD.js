@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Zastap",
+name: "Replace",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Zastap",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Inne",
+section: "Deprecated",
 
 //---------------------------------------------------------------------
 // Action Subtitle
@@ -90,27 +90,27 @@ html: function(isEvent, data) {
 	   Made by EliteArtz!<br>
 	</p>
 	<div padding-top: 8px;">
-		Zastąp tekst:<br>
-		<textarea id="replacemsg" rows="2" placeholder="Wpisz wiadomość tutaj..." style="width: 99%; font-family: monospace; white-space: nowrap; resize: none;"></textarea>
+		Replace Text:<br>
+		<textarea id="replacemsg" rows="2" placeholder="Insert message here..." style="width: 99%; font-family: monospace; white-space: nowrap; resize: none;"></textarea>
 	</div><br>
 	<div style="float: left; width: 50%; padding-top: 8px;">
-	   Zastąp na:<br>
+	   Replace to:<br>
 	   <input id="replaceto" class="round" type="text">
     </div><br>
     <div style="padding-top: 8px;">
         <select id="ifEach" class="round" style="float: right; width: 45%;">
-            <option value="1">Cała zawartość</option>
-            <option value="0" selected>Dla każdego słowa</option>
+            <option value="1">Whole content</option>
+            <option value="0" selected>For Each Word</option>
         </select>
     </div><br><br>
 	<div style="float: left; width: 35%; padding-top: 8px;">
-		Zapisz w:<br>
+		Store Result In:<br>
 		<select id="storage" class="round" onchange="glob.variableChange(this, 'varNameContainer')">
 			${data.variables[0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="float: right; display: none; width: 60%; padding-top: 8px;">
-		Nazwa zmiennej:<br>
+		Variable Name:<br>
 		<input id="varName" class="round" type="text">
 	</div><br><br><br><br>
 </div>`
